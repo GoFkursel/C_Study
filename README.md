@@ -1,6 +1,6 @@
 # C_Study
-a specific C-studying log from very basic level
-
+a specific C-studying log from very basic level  
+学C是为了进阶C++
 ## 2023/07/27  
 太生草了，VScode！  
 >在配置好环境之后，每次调试你需要调试的C文件，都需要！！！删除launch.json文件，然后再F5生成一份  

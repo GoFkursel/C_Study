@@ -1,3 +1,6 @@
+/*
+取出6个不重复的随机数字
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
