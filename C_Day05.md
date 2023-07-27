@@ -55,4 +55,6 @@
 ### 九、printf  
 * printf()       ：“%-xx”：-：左对齐  “%0xx”：0：前面补0  “%m.nxx”：m：整个数的宽度，会补空格，n：小数点后多少位
 * putchar() 输出字符：putchar(ch或’B‘或97或’\n‘)
+* scanf() 获取键盘输入：scanf("%d%d",&a,&b)，也可以在其中用%3d来进行一个接收数据宽度的约束，但只应用于整数型
+* getchar() 接收字符：ch=getchar(),只接收一个字符
 
