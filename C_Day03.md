@@ -2,8 +2,8 @@
 ## 常量与变量
 ### 关键字
 **C的关键字共有32个**  
-char，  
-short，int，long，整型  
+char（1个字节），  
+short，int，long，整型（2个、4个、8个）  
 float，double，浮点型分为，单精度，双精度  
 unsigned，signed（平时可以不写），  
 struct（结构类型），union（联合类型），enum（枚举类型），  
