@@ -42,3 +42,21 @@ struct student* p=(struct student*)malloc(sizeof(struct student)*3)//把struct s
 >struct student stu1 = stu  
 >stu1.name=(char*)malloc(sizeof(char)*10);  
 >strcpy(stu1.name,"wjw")//这里面的name会改变，就算赋给别的变量也会改变，因为把结构体赋给的stu1，里面的name是一个地址  
+
+3. 结构体作为数组传递给函数会退化成指针，失去精度  
+4. const修饰结构体  
+4.1
+>const ss* p=&stu1;  
+>p=&stu2;//ok，p的内容可以修改  
+>p->age=10;//err,p指向的内容不可以修改  
+
+4.2
+>ss* const p=&stu1;  
+>p=&stu1;//err,p的内容不可以修改    
+>p->age=10;//ok,p指向的内容可以修改  
+
+4.3 
+>const ss* const p=&stu1;
+>ss** pp=&p;  
+>(*pp)->age=10;
+>(*pp)=&stu2
