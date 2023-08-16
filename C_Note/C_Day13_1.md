@@ -20,4 +20,8 @@
 >sscanf(*str,*format)//str：函数检索数据的源  
 >sprintf(*str,*format)//sprintf(str,"pi=%f",PI);puts(str)  
 
-**文件块读写**：（用“wb/rb”来读写）fwrite(arr(地址),sizeof(int),数据多少，fp)，fread(arr,sizeof(int),数据多少,fp)//这里面的arr都相当于一个buffer，且读中的sizeof(int)*数据多少，只要满足整体大小，写成多少都可以
+**文件块读写**：（用“wb/rb”来读写）fwrite(arr(地址),sizeof(int),数据多少，fp)，fread(arr,sizeof(int),数据多少,fp)//这里面的arr都相当于一个buffer，且读中的sizeof(int)*数据多少，只要满足整体大小，写成多少都可以  
+**文件随机读写**：fseek(fp,11,SEEK_SET)//从起始偏移  fseek(fp,17,SEEK_END)//从末尾向前偏移 fseek(fp,-8,SEEK_CUR)//从当前位置，“-”为向左偏移，“+”为向右，搭配打开文件时用“r+”，可以实现对原文件的更改，如果用的是“a”，只能追加在文件的最后面；long pos=ftell(fp),查看光标位置；rewind(fp):将光标重置回起始位置  
+**删除、重命名文件**：value=remove(路径名称"D:/c.txt"),删除的文件不会出现在回收站中，如果value=0，则删除成功；rename("D:/a.txt","D:/code/abc.txt"(后一个是重命名的名字))，因此该函数不仅可以用来重命名，还可以用来剪切文件  
+### 二、文件缓冲区  
+**更新缓存区**：fflush(fp),可以手动更新缓存区，但是最好设置一个判断，否则频繁更新会损伤硬盘
