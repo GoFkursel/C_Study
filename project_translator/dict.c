@@ -10,7 +10,7 @@ typedef struct  DICT
     char* trans;
 }dict;
 
-dict* list;
+dict* list=NULL;
 
 
 int GetWord(){
@@ -99,5 +99,6 @@ int main(void){
             printf("未找到");
     }
     DestroySpace();
+    system("pause");
     return 0;
 }
