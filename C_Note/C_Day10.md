@@ -1,4 +1,4 @@
-# Day10  
+# Day10  “永远把指针指到你要指向的地方”，即*p=&a，否则会有danger！！  
 ### 一、指针与数组  
 数组arr，是数组第一个元素的地址，如果把arr赋给p，两者是一样的   
 >printf("%d\n",*p)=printf("%d\n", *arr)= printf("%d\n", arr[0])=printf("%d\n", p[0]) 
